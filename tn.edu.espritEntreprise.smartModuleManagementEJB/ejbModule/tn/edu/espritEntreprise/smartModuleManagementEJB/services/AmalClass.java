@@ -6,7 +6,8 @@ public class AmalClass {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Bonjour c Amal");
+  
+		System.out.println("Bonjour ts le monde");
 	}
 
 }
