@@ -1,10 +1,14 @@
 package tn.edu.espritEntreprise.smartModuleManagementEJB.services.impl;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import tn.edu.espritEntreprise.smartModuleManagementEJB.entities.Module;
+import tn.edu.espritEntreprise.smartModuleManagementEJB.entities.Teacher;
 import tn.edu.espritEntreprise.smartModuleManagementEJB.services.interfaces.ModuleManagementServicesLocal;
 import tn.edu.espritEntreprise.smartModuleManagementEJB.services.interfaces.ModuleManagementServicesRemote;
 
@@ -45,7 +49,20 @@ public class ModuleManagementServices implements
 	@Override
 	public void updateModule(Module module) {
 		entityManager.merge(module);
-		
+
+	}
+
+	@Override
+	public List<Module> findAllModule() {
+		String jpql = "select m from Module m";
+		Query query = entityManager.createQuery(jpql);
+		return query.getResultList();
+
+	}
+
+	@Override
+	public void addTeacher(Teacher teacher) {
+		entityManager.persist(teacher);
 	}
 
 }

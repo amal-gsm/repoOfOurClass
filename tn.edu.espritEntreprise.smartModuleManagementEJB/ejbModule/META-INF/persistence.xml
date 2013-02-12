@@ -5,6 +5,9 @@
 	<persistence-unit name="tn.edu.espritEntreprise.smartModuleManagementEJB">
 		<jta-data-source>java:/myDs</jta-data-source>
 		<class>tn.edu.espritEntreprise.smartModuleManagementEJB.entities.Module</class>
+		<class>tn.edu.espritEntreprise.smartModuleManagementEJB.entities.Teacher</class>
+		<class>tn.edu.espritEntreprise.smartModuleManagementEJB.entities.oneToOneUni.A</class>
+		<class>tn.edu.espritEntreprise.smartModuleManagementEJB.entities.oneToOneUni.B</class>
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />

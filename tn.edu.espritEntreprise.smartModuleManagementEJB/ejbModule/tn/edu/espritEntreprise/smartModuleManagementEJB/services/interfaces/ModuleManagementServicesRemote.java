@@ -1,8 +1,11 @@
 package tn.edu.espritEntreprise.smartModuleManagementEJB.services.interfaces;
 
+import java.util.List;
+
 import javax.ejb.Remote;
 
 import tn.edu.espritEntreprise.smartModuleManagementEJB.entities.Module;
+import tn.edu.espritEntreprise.smartModuleManagementEJB.entities.Teacher;
 
 @Remote
 public interface ModuleManagementServicesRemote {
@@ -14,4 +17,7 @@ public interface ModuleManagementServicesRemote {
 
 	public void updateModule(Module module);
 
+	public List<Module> findAllModule();
+
+	public void addTeacher(Teacher teacher);
 }
