@@ -65,4 +65,12 @@ public class ModuleManagementServices implements
 		entityManager.persist(teacher);
 	}
 
+	@Override
+	public Teacher findTeacherByModuleId(int idModule) {
+		String jpdl = "select t from Teacher t where t.module.idModule="
+				+ idModule;
+		Query query = entityManager.createQuery(jpdl);
+		return (Teacher) query.getSingleResult();
+	}
+
 }

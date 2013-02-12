@@ -20,4 +20,6 @@ public interface ModuleManagementServicesRemote {
 	public List<Module> findAllModule();
 
 	public void addTeacher(Teacher teacher);
+
+	public Teacher findTeacherByModuleId(int idModule);
 }
